@@ -38,10 +38,10 @@ The only requirements are [Mono](http://www.mono-project.com/download/), [FSharp
 
 1. In a terminal, navigate to the root of the __FSharpKoans__ solution directory.
 
-2. Restore all NuGet packages (replace _/Path/To/NuGet_ with the appropriate directory for your 
+2. Install all NuGet packages (replace _/Path/To/NuGet_ with the appropriate directory for your 
    environment): 
    ```
-   mono /Path/To/NuGet/nuget.exe restore FSharpKoans.sln
+   mono /Path/To/NuGet/nuget.exe install -OutputDirectory packages
    ```
  
 3. Build the solution: 
