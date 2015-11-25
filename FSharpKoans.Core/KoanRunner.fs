@@ -23,7 +23,7 @@ type KoanRunner(containers) =
 
     let getContainerResult (container: Type) =
         let name = container.Name
-        let lineOne = sprintf "%s:" name
+        let lineOne = sprintf "When contemplating %s:" name
 
         container |> KoanContainer.runKoans
         |> Seq.scan (buildKoanResult "%s\n    %s") (Success lineOne)

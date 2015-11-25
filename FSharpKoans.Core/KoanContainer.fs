@@ -17,10 +17,10 @@ let runKoans container =
     let getKoanResult (m:MethodInfo) =
         try
             m.Invoke(null, [||]) |> ignore
-            Success <| sprintf "%s passed" m.Name
+            Success <| sprintf "%s has expanded your awareness." m.Name
         with
         | ex -> 
-            let outcome = sprintf "%s failed." m.Name
+            let outcome = sprintf "%s has damaged your karma." m.Name
             Failure(outcome, ex.InnerException)
         
     container
